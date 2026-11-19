@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leonida — GTA VI Trophy Guide &amp; Tracker</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <div class="brand">
+    <h1>LEONIDA</h1>
+    <p class="tagline">GTA VI Trophy Guide &amp; Tracker — all 55 PS5 trophies</p>
+  </div>
+  <div class="progress" id="progressBox" aria-label="Platinum progress">
+    <div class="progress-numbers"><span id="earnedCount">0 / 55</span><span id="earnedPct">0%</span></div>
+    <div class="progress-bar"><div class="progress-fill" id="progressFill" style="width:0%"></div></div>
+    <p class="progress-note" id="progressNote">Earn every trophy to take the platinum.</p>
+  </div>
+</header>
+<div class="audit" id="auditStrip" role="note">
+  <strong>Audit:</strong> 55 / 55 trophies verified against the official PS5 list (Exophase / PSNProfiles, cross-checked on PlanetGTA6, Nov 18 2026) — 1 Platinum, 2 Gold, 6 Silver, 46 Bronze; 28 hidden.
+  <strong>Sources:</strong> GTA Zone full trophy guide, Nov 18 2026 (tips from PowerPyx and GTABase).
+  <strong>Honest gap:</strong> 5 hidden triggers are still unconfirmed by PowerPyx and GTABase — they are flagged in the guide, never invented.
+</div>
+<nav class="tabs" role="tablist" aria-label="Guide sections">
+  <button class="tab active" data-view="checklist" role="tab" aria-selected="true">Checklist</button>
+  <button class="tab" data-view="roadmap" role="tab" aria-selected="false">Roadmap to Platinum</button>
+  <button class="tab" data-view="missable" role="tab" aria-selected="false">Missable Watch</button>
+</nav>
+<main>
+  <section id="view-checklist" class="view active">
+    <div class="toolbar">
+      <input id="searchBox" type="search" placeholder="Search a trophy…" aria-label="Search trophies">
+      <select id="kindFilter" aria-label="Filter by kind">
+        <option value="">All kinds</option>
+        <option value="story">Story</option>
+        <option value="missable">Missable</option>
+        <option value="collectibles">Collectibles</option>
+        <option value="activities">Activities</option>
+        <option value="robbery">Robbery</option>
+        <option value="exploration">Exploration</option>
+        <option value="money">Money</option>
+        <option value="platinum">Platinum</option>
+      </select>
+      <select id="gradeFilter" aria-label="Filter by grade">
+        <option value="">All grades</option>
+        <option value="platinum">Platinum</option>
+        <option value="gold">Gold</option>
+        <option value="silver">Silver</option>
+        <option value="bronze">Bronze</option>
+      </select>
+      <select id="earnedFilter" aria-label="Filter by earned state">
+        <option value="">All trophies</option>
+        <option value="earned">Earned</option>
+        <option value="unearned">Not earned yet</option>
+      </select>
+      <label class="spoiler-toggle"><input type="checkbox" id="spoilerToggle" checked> Hide spoilers</label>
+      <button id="exportBtn" type="button">Export progress</button>
+      <button id="importBtn" type="button">Import progress</button>
+      <input id="importFile" type="file" accept="application/json" hidden>
+      <button id="shareBtn" type="button">Copy progress link</button>
+    </div>
+    <p class="list-count" id="listCount"></p>
+    <div class="columns">
+      <ul class="trophy-list" id="trophyList"></ul>
+      <aside class="detail" id="detailPanel" aria-live="polite"></aside>
+    </div>
+  </section>
+  <section id="view-roadmap" class="view">
+    <h2>Roadmap to Platinum</h2>
+    <div class="facts" id="factsGrid"></div>
+    <p class="source-line">Facts: PowerPyx via GTA Zone, Nov 18 2026.</p>
+    <div id="stageList"></div>
+    <h3>100% Completion checklist</h3>
+    <p>The A Long Road table — what the checklist asks for. Source: PowerPyx via GTA Zone, Nov 18 2026.</p>
+    <table class="data-table" id="completionTable">
+      <thead><tr><th>Goal</th><th>Needed</th><th>Trophy</th></tr></thead>
+      <tbody></tbody>
+    </table>
+    <h3>All 55 trophies in roadmap order</h3>
+    <p>Every trophy in the order this guide tackles it, with its grade, stage and key fact.</p>
+    <table class="data-table" id="roadmapTable">
+      <thead><tr><th>#</th><th>Trophy</th><th>Grade</th><th>Stage</th><th>Key fact</th></tr></thead>
+      <tbody></tbody>
+    </table>
+  </section>
+  <section id="view-missable" class="view">
+    <h2>Missable Watch</h2>
+    <div class="warn-box">
+      <h3>Positive Mental Attitude — the only trophy that may be missable</h3>
+      <p><strong>What it asks:</strong> meditate at all 18 spots across Leonida (10 locations, with Jason and Lucia).</p>
+      <p><strong>Why it can be missed:</strong> the first meditation spot is offered at home in Chapter 1 and becomes permanently unavailable after that chapter. Nobody has confirmed whether the trophy needs it, but PowerPyx earned the trophy after doing it — so do it to be safe.</p>
+      <p><strong>The good news:</strong> the last meditation needs Jason and Lucia playable together, which opens after Chapter 2 — and 100% Completion only asks for 15 of the 18 spots, so this trophy cannot cost you A Long Road. Everything else, story trophies included, cannot be missed.</p>
+      <p class="source-line">Source: PowerPyx via GTA Zone, Nov 18 2026.</p>
+    </div>
+    <h3>Save strategy — no mission replay, no New Game+</h3>
+    <ol class="steps">
+      <li>Keep a manual save at the start of every chapter (15 slots are available).</li>
+      <li>Make one more manual save just before the final mission.</li>
+      <li>Do the Chapter 1 meditation spot when it is offered at home — do not skip it.</li>
+      <li>After the story, free roam stays open for everything else, so cleanup cannot be missed.</li>
+    </ol>
+    <h3>Cheats disable trophies — and saving</h3>
+    <p>GTA VI has 61 cheats, and none of them work before the credits: each one unlocks after the story, with its own requirement on top. Using any cheat disables trophies, achievements and saving (GTABase says the block lasts for the current session, as it did in GTA 5 and RDR2). Save before you cheat, and keep your trophy runs cheat-free.</p>
+    <p class="source-line">Source: PowerPyx and GTABase via GTA Zone, Nov 18 2026.</p>
+  </section>
+</main>
+<footer>
+  <p>Leonida is an independent fan guide. Grand Theft Auto, GTA and Rockstar Games are trademarks of their owners; no Rockstar logo, artwork or game screenshot is used here. Trophy names and descriptions are shown as PlayStation publishes them; every guide is written in our own words and cites its sources beside it. Works fully offline — no network requests.</p>
+</footer>
+<script src="app.js"></script>
+</body>
+</html>
